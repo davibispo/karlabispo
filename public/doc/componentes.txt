@@ -1,0 +1,18 @@
+Instalação de pre-requisitos:
+    - composer;
+    - visual studio;
+    - laragon;
+    - git;
+
+Criando projeto:
+    - Terminal de comando: #composer create-project --prefer-dist laravel/laravel nome_do_projeto
+    - No git criar o projeto e clonar na pasta;
+
+Configuarações no Laravel:
+    - app/config: mudar timezone para "America/Sao_Paulo"
+    - .env: colocar nome no banco de dados
+
+Instação de componentes:
+    - Larave collective para formulários
+    - Laravel breeze para autenticação: composer require laravel/breeze --dev; npm install && npm run dev
+    
