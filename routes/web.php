@@ -13,8 +13,10 @@ use App\Http\Controllers\{
     VideosController,
     CursoController,
     PostController,
+    LivrariaController,
 };
 
+Route::resource('livraria', LivrariaController::class);
 Route::resource('posts', PostController::class);
 Route::resource('curso', CursoController::class);
 Route::resource('videos', VideosController::class);

@@ -42,7 +42,7 @@
             <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Início</span></a></li>
             <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre mim</span></a></li>
             <!--<li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>-->
-            <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-store"></i> <span>Loja</span></a></li>
+            <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book"></i> <span>Livraria</span></a></li>
             <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Serviços</span></a></li>
             <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-send"></i> <span>Contato</span></a></li>
         </ul>
@@ -118,7 +118,7 @@
                 <div class="section-title">
                     <h2 style="color: white">Livraria</h2>
                     <p>Em desenvolvimento...</p>
-                    <p><a href="{{ route('loja.index') }}">Página da Loja</a></p>
+                    <p><a href="{{ route('livraria.index') }}">Página da Livraria</a></p>
                 </div>
                 
             </div>

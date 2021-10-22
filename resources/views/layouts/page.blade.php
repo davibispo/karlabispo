@@ -41,7 +41,7 @@
             <ul>
                 <li><a href="{{route('welcome')}}" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Início</span></a></li>
                 <li><a href="{{route('welcome')}}#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre mim</span></a></li>
-                <li><a href="{{route('welcome')}}#portfolio" class="nav-link scrollto"><i class="bx bx-store"></i> <span>Loja</span></a></li>
+                <li><a href="{{route('welcome')}}#portfolio" class="nav-link scrollto"><i class="bx bx-book"></i> <span>Livraria</span></a></li>
                 <li><a href="{{route('welcome')}}" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Serviços</span></a></li>
                 <li><a href="{{route('welcome')}}#contact" class="nav-link scrollto"><i class="bx bx-send"></i> <span>Contato</span></a></li>
             </ul>
