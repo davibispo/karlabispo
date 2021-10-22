@@ -13,7 +13,7 @@ class PalestraController extends Controller
      */
     public function index()
     {
-        //
+        return view('palestras.index');
     }
 
     /**

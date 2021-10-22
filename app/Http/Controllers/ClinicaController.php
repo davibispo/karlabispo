@@ -13,7 +13,7 @@ class ClinicaController extends Controller
      */
     public function index()
     {
-        //
+        return view('clinica.index');
     }
 
     /**

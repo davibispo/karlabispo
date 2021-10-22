@@ -13,7 +13,7 @@ class CursoController extends Controller
      */
     public function index()
     {
-        //
+        return view('curso.index');
     }
 
     /**

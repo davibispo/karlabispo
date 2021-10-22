@@ -13,7 +13,7 @@ class RaizesController extends Controller
      */
     public function index()
     {
-        //
+        return view('raizes_da_infancia.index');
     }
 
     /**

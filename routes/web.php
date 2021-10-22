@@ -9,16 +9,16 @@ use App\Http\Controllers\{
     ContatoController,
     LinkController,
     LojaController,
-    PalestrasController,
+    PalestraController,
     VideosController,
-    CursosController,
+    CursoController,
     PostController,
 };
 
 Route::resource('posts', PostController::class);
-Route::resource('curso', CursosController::class);
+Route::resource('curso', CursoController::class);
 Route::resource('videos', VideosController::class);
-Route::resource('palestras', PalestrasController::class);
+Route::resource('palestras', PalestraController::class);
 Route::resource('loja', LojaController::class);
 Route::resource('links', LinkController::class);
 Route::resource('contato', ContatoController::class);
@@ -33,6 +33,6 @@ Route::get('/dashboard', function () {
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 require __DIR__.'/auth.php';
