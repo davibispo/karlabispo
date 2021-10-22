@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     RaizesController,
     SiteController,
@@ -13,7 +14,6 @@ use App\Http\Controllers\{
     CursosController,
     PostController,
 };
-use Illuminate\Support\Facades\Route;
 
 Route::resource('posts', PostController::class);
 Route::resource('curso', CursosController::class);
