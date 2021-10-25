@@ -18,48 +18,37 @@
                             <div class="card-header text-center" style="background-color:cornflowerblue;"><b>CADASTRAR NOVO PRODUTO</b></div>
 
                             <div class="card-body">                
-                                
-                                    <div class="form-group row">
-                                        {!! Form::label('codigo', 'Código do Produto', ['class'=>'col-sm-4 col-form-label text-md-right']) !!}
-                                        <div class="col-md-6">
-                                            {!! Form::text('codigo', null, ['class'=>'form-control','autofocus']) !!}
-                                        </div>
+                                {!! Form::open(['method'=>'POST', 'action'=>'App\Http\Controllers\LivrariaController@store', 'class'=>'form-horizontal']) !!}
+                               
+                                <div class="form-group">
+                                    {!! Form::label('codigo_html', 'Código do livro', ['class'=>'col-md-4 control-label']) !!}
+                                    <div class="col-md-6">
+                                        {!! Form::text('codigo_html', null, ['class' => 'form-control', 'placeholder'=>'Cole aqui o cógio HTML']) !!}
                                     </div>
-                                    
-                                    <div class="form-group row">
-                                        {!! Form::label('descricao', 'Descrição', ['class'=>'col-sm-4 col-form-label text-md-right']) !!}
-                                        <div class="col-md-6">
-                                            {!! Form::text('descricao', null, ['class'=>'form-control','maxlength'=>'60', 'required','autofocus']) !!}
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group row">
-                                        {!! Form::label('valor', 'Valor (R$)', ['class'=>'col-sm-4 col-form-label text-md-right']) !!}
-                                        <div class="col-md-6">
-                                            {!! Form::text('valor', null, ['class'=>'form-control', 'required','autofocus']) !!}
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group row">
-                                        {!! Form::label('quantidade', 'Quantidade', ['class'=>'col-sm-4 col-form-label text-md-right']) !!}
-                                        <div class="col-md-6">
-                                            {!! Form::text('quantidade', 1, ['class'=>'form-control', 'required','autofocus']) !!}
-                                        </div>
-                                    </div>
+                                </div>
 
-                                    <div class="form-group row mb-0">
-                                        <div class="col-md-8 offset-md-4">
-                                            {!! Form::submit('Cadastrar', ['class'=>'btn btn-dark']) !!}
-                                            <a href="{{route('loja.index')}}" class="btn btn-light" role="button">Retornar</a>
-                                        </div>
+                                <div class="form-group">
+                                    {!! Form::label('categoria', 'Categoria do livro', ['class'=>'col-md-4 control-label']) !!}
+                                    <div class="col-md-6">
+                                        {!! Form::select('categoria', [
+                                            'infantil' => 'Infantil', 
+                                            'educacao' => 'Educação',
+                                            'familia' => 'Família',
+                                            'politica' => 'Política',
+                                            ], null, ['class' => 'form-control', 'placeholder' => '-- Categoria do livro --']) !!}
                                     </div>
+                                </div>
                                 
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-4">
+                                        {!! Form::submit('Enviar Solicitação', ['class'=>'btn btn-primary']) !!}
+                                    </div>
+                                </div>
+                                {!! Form::close() !!}
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
             </div>
 
         </div>

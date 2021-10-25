@@ -7,7 +7,7 @@
 
             <div class="section-title">
                 <h2>Palestras</h2>
-                <p>Aguarde...</p>
+                <p>Em desenvolvimento...</p>
             </div>
 
             <div class="row">

@@ -15,6 +15,11 @@ class CreateLivrariasTable extends Migration
     {
         Schema::create('livrarias', function (Blueprint $table) {
             $table->id();
+
+            $table->text('codigo_html');
+            $table->text('descricao')->nullable();
+            $table->string('categoria');
+            
             $table->timestamps();
         });
     }
