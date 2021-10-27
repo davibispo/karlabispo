@@ -13,7 +13,12 @@
                 </div>
             </div>
 
-            <a href="{{ route('livraria.create') }}">Adicionar livros na livraria</a>
+            <ul>
+                <li><a href="{{ route('livraria.create') }}">Adicionar livros na livraria</a></li>
+                <li><a href="{{ route('posts.create') }}">Criar um novo post no blog</a></li>
+            </ul>
+            
+            
         </div>
     </div>
 </x-app-layout>

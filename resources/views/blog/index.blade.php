@@ -299,11 +299,22 @@
             &copy; Copyright <strong><span>Karla Bispo</span></strong>. Todos os direitos reservados
         </div>
         <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: [license-url] -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Desenvolvido por <a href="#">davibispo.com.br</a>
+        </div>
+        <div class="login">
+          @if (Route::has('login'))
+              <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                  @auth
+                      <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Admin</a>
+                  @else
+                      <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><i class="bx bx-user"></i></a>
+
+                      @if (Route::has('register'))
+                          <!--<a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>-->
+                      @endif
+                  @endauth
+              </div>
+          @endif
         </div>
         </div>
     </footer><!-- End Footer -->
