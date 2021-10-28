@@ -38,11 +38,7 @@ class LivrariaController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
-        $this->validate($request, [
-            'codigo_html' => 'required',
-        ]);
-        
+
         $livro = new Livraria();
         
         $livro->codigo_html = $request->codigo_html;

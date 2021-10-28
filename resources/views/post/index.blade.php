@@ -21,11 +21,17 @@
                     <tr>
                         <td>{{ $post->titulo }}</td>
                         <td>{{ $post->categoria }}</td>
-                        <td>{{ $post->imagem }}</td>
+                        <td><img src="{{ url("storage/{$post->imagem}") }}" alt="{{ $post->titulo }}" style="max-width:100px"/></td>
                     </tr>
                     @endforeach
                   </tbody>
                 </table>
+
+                <div class="btn">
+                    <a href="{{ route('post.create') }}">
+                        <button class="btn btn-dark">Criar Novo</button>
+                    </a>
+                </div>
             </div>           
 
         </div>

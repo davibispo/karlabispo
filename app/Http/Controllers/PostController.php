@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -41,7 +42,14 @@ class PostController extends Controller
         $post->titulo = $request->titulo;
         $post->texto = $request->texto;
         $post->categoria = $request->categoria;
-        $post->imagem = $request->imagem;
+
+        if($request->imagem->isValid()){
+            $nameFile = Str::of($request->titulo)->slug('-') . '.' .$request->imagem->GetClientOriginalExtension();
+            $imagem = $request->imagem->storeAs('public/posts', $nameFile);
+            $imagem = str_replace('public/','',$imagem);
+            $post['imagem'] = $imagem;
+
+        }
 
         $post->save();
 
