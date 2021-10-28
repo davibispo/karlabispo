@@ -16,8 +16,10 @@ use App\Http\Controllers\{
     LivrariaController,
 };
 
+Route::middleware(['auth'])->group(function(){
+    Route::resource('post', PostController::class);
+});
 Route::resource('livraria', LivrariaController::class);
-Route::resource('posts', PostController::class);
 Route::resource('curso', CursoController::class);
 Route::resource('videos', VideosController::class);
 Route::resource('palestras', PalestraController::class);

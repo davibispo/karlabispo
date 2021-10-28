@@ -14,8 +14,8 @@
             </div>
 
             <ul>
-                <li><a href="{{ route('livraria.create') }}">Adicionar livros na livraria</a></li>
-                <li><a href="{{ route('posts.create') }}">Criar um novo post no blog</a></li>
+                <li><a href="{{ route('livraria.create') }}">Administrar Livraria</a></li>
+                <li><a href="{{ route('post.index') }}">Administrar Blog</a></li>
             </ul>
             
             

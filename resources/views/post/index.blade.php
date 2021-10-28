@@ -11,7 +11,7 @@
             </div>
 
             <div class="row">
-                <a href="{{route('posts.create')}}">Criar um novo post</a>
+                <a href="{{route('post.create')}}">Criar um novo post</a>
             </div>
 
         </div>
