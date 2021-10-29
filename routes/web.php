@@ -14,11 +14,15 @@ use App\Http\Controllers\{
     CursoController,
     PostController,
     LivrariaController,
+    ComentarioController,
+    RespostaController,
 };
 
 Route::middleware(['auth'])->group(function(){
     Route::resource('post', PostController::class);
 });
+Route::resource('respostas', RespostaController::class);
+Route::resource('comentarios', ComentarioController::class);
 Route::resource('livraria', LivrariaController::class);
 Route::resource('curso', CursoController::class);
 Route::resource('videos', VideosController::class);

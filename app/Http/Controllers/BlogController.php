@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -13,7 +15,10 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blog.index');
+        $posts = Post::all()->where('ativo', 1);
+        $categorias = Post::all()->where('ativo', 1);
+        
+        return view('blog.index', compact('posts','categorias'));
     }
 
     /**
@@ -45,7 +50,9 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::where('id', $id)->first();
+
+        return view('blog.show', compact('post'));
     }
 
     /**

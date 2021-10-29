@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class PostController extends Controller
@@ -15,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::all()->sortByDesc('id');
         return view('post.index', compact('posts'));
     }
 
@@ -39,8 +40,10 @@ class PostController extends Controller
     {
         $post = new Post();
 
+        $post->autor = Auth::user()->name;
         $post->titulo = $request->titulo;
         $post->texto = $request->texto;
+        $post->resumo = $request->resumo;
         $post->categoria = $request->categoria;
 
         if($request->imagem->isValid()){

@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comentario;
 use Illuminate\Http\Request;
 
-class ComentarioController extends Controller
+class RespostaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,15 +34,7 @@ class ComentarioController extends Controller
      */
     public function store(Request $request)
     {
-        $comentario = new Comentario();
-
-        $comentario->nome = $request->nome;
-        $comentario->email = $request->email;
-        $comentario->comentario = $request->comentario;
-
-        $comentario->save();
-
-        return redirect()->back();
+        //
     }
 
     /**

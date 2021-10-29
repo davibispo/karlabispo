@@ -24,6 +24,13 @@
                             {{ Form::textarea('texto', null, array('class' =>'form-control input', 'cols' => 20, 'rows' =>10, 'required' => '', 'maxlength' => ""))}}
                         </div>
                     </div>
+
+                    <div class="form-group row">
+                        {{ Form::label('resumo', 'Resumo:', ['class'=>'col-sm-4 col-form-label text-md-right']) }}
+                        <div class="col-md-12">
+                            {{ Form::textarea('resumo', null, array('class' =>'form-control input', 'cols' => 20, 'rows' =>5, 'required' => '', 'maxlength' => "500"))}}
+                        </div>
+                    </div>
                     
                     <div class="form-group row">
                         {{ Form::label('categoria', 'Categoria:', ['class'=>'col-sm-4 col-form-label text-md-right']) }}
@@ -53,8 +60,8 @@
                             {{ Form::submit('Salvar', ['class'=>'btn btn-dark btn-sm']) }}
                         </div>
                     </div>
-
                     {{ Form::close() }}
+                    
                 </div>
             </div>
         </div>

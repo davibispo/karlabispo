@@ -13,7 +13,7 @@
                     <tr>
                       <th>Título</th>
                       <th>Categoria</th>
-                      <th>Imagem</th>
+                      <th>Ativo</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -21,7 +21,7 @@
                     <tr>
                         <td>{{ $post->titulo }}</td>
                         <td>{{ $post->categoria }}</td>
-                        <td><img src="{{ url("storage/{$post->imagem}") }}" alt="{{ $post->titulo }}" style="max-width:100px"/></td>
+                        <td>{{ $post->ativo }}</td>
                     </tr>
                     @endforeach
                   </tbody>
@@ -30,6 +30,12 @@
                 <div class="btn">
                     <a href="{{ route('post.create') }}">
                         <button class="btn btn-dark">Criar Novo</button>
+                    </a>
+                </div>
+                
+                <div class="btn">
+                    <a href="{{ route('blog.index') }}">
+                        <button class="btn btn-outline-secondary">Página do Blog</button>
                     </a>
                 </div>
             </div>           
