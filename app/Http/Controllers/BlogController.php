@@ -15,10 +15,12 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = Post::all()->where('ativo', 1);
-        $categorias = Post::all()->where('ativo', 1);
+        $posts = Post::where('ativo', 1)->latest()->paginate(2);
+        $todos = Post::all()->where('ativo', 1)->sortByDesc('id');
+        $categorias = DB::table('posts')->select('categoria')->distinct()->get();
+
         
-        return view('blog.index', compact('posts','categorias'));
+        return view('blog.index', compact('posts','todos','categorias'));
     }
 
     /**
@@ -51,8 +53,10 @@ class BlogController extends Controller
     public function show($id)
     {
         $post = Post::where('id', $id)->first();
+        $posts = Post::all()->where('ativo', 1);
+        $categorias = DB::table('posts')->select('categoria')->distinct()->get();
 
-        return view('blog.show', compact('post'));
+        return view('blog.show', compact('post','posts','categorias'));
     }
 
     /**
