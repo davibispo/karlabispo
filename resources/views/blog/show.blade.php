@@ -191,7 +191,7 @@
                     <li>
                     <a href="#">{{ $item->categoria }} 
                         <span>
-                        ({{ DB::table('posts')->select('categoria')->where('categoria', $item->categoria)->count('categoria') }})
+                            ({{ DB::table('posts')->select('categoria')->where('ativo',1)->where('categoria', $item->categoria)->count('categoria') }})
                         </span>
                     </a>
                     </li>

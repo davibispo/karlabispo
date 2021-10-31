@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     
-                    {{ Form::open(['method'=>'POST', 'action'=>'App\Http\Controllers\PostController@store', 'enctype'=>'multipart/form-data', 'class'=>'form-horizontal']) }}
+                    {{ Form::model($post, ['method'=>'PATCH', 'action'=>['App\Http\Controllers\PostController@update', $post->id], 'enctype'=>'multipart/form-data', 'class'=>'form-horizontal']) }}
 
                     <div class="form-group row">
                         {{ Form::label('titulo', 'Título:', ['class'=>'col-sm-4 col-form-label text-md-right']) }}
@@ -57,7 +57,7 @@
                     <br>
                     <div class="form-group row">
                         <div class="col-md-8 offset-md-4">
-                            {{ Form::submit('Salvar', ['class'=>'btn btn-dark btn-sm']) }}
+                            {{ Form::submit('Atualizar', ['class'=>'btn btn-dark btn-sm']) }}
                         </div>
                     </div>
                     {{ Form::close() }}

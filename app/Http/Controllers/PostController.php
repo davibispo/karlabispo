@@ -78,7 +78,10 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::where('id', $id)->first();
+        //dd($post);
+
+        return view('post.update', compact('post'));
     }
 
     /**
@@ -90,7 +93,16 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::where('id', $id)->first();
+        
+        $post->titulo = $request->titulo;
+        $post->texto = $request->texto;
+        $post->resumo = $request->resumo;
+        $post->categoria = $request->categoria;
+        
+        $post->update();
+
+        return redirect()->route('post.index');
     }
 
     /**
@@ -102,5 +114,20 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function ativar($id)
+    {
+        $post = Post::find($id);
+
+        if($post->ativo == 0){
+            $post->ativo = 1; //ativar cadastro
+            $post->update();
+            return redirect()->back();
+        }else{
+            $post->ativo = 0; //desativar cadastro
+            $post->update();
+            return redirect()->back();
+        }
     }
 }

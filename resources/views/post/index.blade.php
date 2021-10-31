@@ -13,6 +13,7 @@
                     <tr>
                       <th>Título</th>
                       <th>Categoria</th>
+                      <th>Editar</th>
                       <th>Ativo</th>
                     </tr>
                   </thead>
@@ -21,7 +22,18 @@
                     <tr>
                         <td>{{ $post->titulo }}</td>
                         <td>{{ $post->categoria }}</td>
-                        <td>{{ $post->ativo }}</td>
+                        <td>
+                            <a href="{{ route('post.edit', $post->id) }}">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                        </td>
+                        <td>
+                            @if ($post->ativo == 1)
+                                <a href="{{ route('post.ativar', $post->id) }}"><i class="bi bi-toggle-on" style="color:green"></i></a>
+                            @else
+                                <a href="{{ route('post.ativar', $post->id) }}"><i class="bi bi-toggle-off" style="color:red"></i></a>
+                            @endif
+                        </td>
                     </tr>
                     @endforeach
                   </tbody>

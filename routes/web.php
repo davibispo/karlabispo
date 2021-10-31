@@ -19,6 +19,7 @@ use App\Http\Controllers\{
 };
 
 Route::middleware(['auth'])->group(function(){
+    Route::get('post/ativar/{id}', [PostController::class, 'ativar'])->name('post.ativar');
     Route::resource('post', PostController::class);
 });
 Route::resource('respostas', RespostaController::class);

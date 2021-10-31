@@ -16,12 +16,12 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('autor')->nullable();
-            $table->string('titulo')->unique();
+            $table->string('titulo');
             $table->text('texto');
             $table->text('resumo');
             $table->text('imagem')->nullable();
             $table->string('categoria');
-            $table->char('ativo', 1)->default('1');
+            $table->char('ativo', 1)->default('0');
             $table->timestamps();
         });
     }
