@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header" style="font-weight:bold">Novo Artigo</div>
+                <div class="card-header" style="font-weight:bold">Editar Artigo</div>
 
                 <div class="card-body">
                     
