@@ -119,8 +119,8 @@
 
                 <div class="section-title">
                     <h2 style="color: white">Livraria</h2>
-                    <p>Em desenvolvimento...</p>
-                    <p><a href="{{ route('livraria.index') }}">Página da Livraria</a></p>
+                    <p><i class="bi bi-book"></i></p>
+                    <p><a href="{{ route('livraria.index') }}" class="link">Página da Livraria</a></p>
                 </div>
                 
             </div>

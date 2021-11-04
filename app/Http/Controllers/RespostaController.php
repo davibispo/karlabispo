@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Resposta;
 use Illuminate\Http\Request;
 
 class RespostaController extends Controller
@@ -13,7 +14,7 @@ class RespostaController extends Controller
      */
     public function index()
     {
-        //
+        return view('respostas.index');
     }
 
     /**
@@ -34,7 +35,14 @@ class RespostaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $resposta = new Resposta();
+
+        $resposta->nome = auth()->user()->name;
+        $resposta->comentario_id = $request->comentario_id;
+        $resposta->resposta = $request->resposta;
+
+        $resposta->save();
+        return redirect()->back();
     }
 
     /**

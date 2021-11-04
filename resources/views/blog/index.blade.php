@@ -18,7 +18,7 @@
             <article class="entry">
               
               <div class="entry-img">
-                <img src="{{ url("storage/{$post->imagem}") }}" alt="{{ $post->titulo }}" class="img-fluid blog-imagem">
+                <img src="{{ url("storage/{$post->imagem}") }}" alt="{{ $post->titulo }}" class="img-fluid">
               </div>
               
               <h2 class="entry-title">
@@ -29,7 +29,7 @@
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i>{{ $post->autor }}</li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ date('d-m-Y', strtotime($post->created_at)) }}</li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{{ route('blog.show', $post->id) }}">12 Comments</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i>{{ $comentarioQtde }} Comentário(s)</li>
                 </ul>
               </div>
 

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comentario;
 use App\Models\Post;
+use App\Models\Resposta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -19,8 +21,9 @@ class BlogController extends Controller
         $todos = Post::all()->where('ativo', 1)->sortByDesc('id');
         $categorias = DB::table('posts')->select('categoria')->where('ativo',1)->distinct()->get();
 
+        $comentarioQtde = DB::table('comentarios')->select('id')->distinct()->count();
         
-        return view('blog.index', compact('posts','todos','categorias'));
+        return view('blog.index', compact('posts','todos','categorias','comentarioQtde'));
     }
 
     /**
@@ -51,12 +54,16 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+    {   
         $post = Post::where('id', $id)->first();
         $posts = Post::all()->where('ativo', 1);
         $categorias = DB::table('posts')->select('categoria')->distinct()->get();
+        $comentarios = Comentario::all()->where('ativo', 1);
+        $respostas = Resposta::all()->where('ativo', 1);
 
-        return view('blog.show', compact('post','posts','categorias'));
+        $comentarioQtde = DB::table('comentarios')->where('post_id', $id)->select('id')->distinct()->count();
+        
+        return view('blog.show', compact('post','posts','categorias','comentarios','respostas','comentarioQtde'));
     }
 
     /**
@@ -90,6 +97,11 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+    }
+
+    public function categoria($id)
+    {
+        //$categoria = Post::where('id', $)
     }
 }

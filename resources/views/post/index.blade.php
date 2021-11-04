@@ -50,6 +50,7 @@
                         <button class="btn btn-outline-secondary">Página do Blog</button>
                     </a>
                 </div>
+
             </div>           
 
         </div>

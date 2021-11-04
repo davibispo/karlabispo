@@ -37,6 +37,7 @@ class ComentarioController extends Controller
     {
         $comentario = new Comentario();
 
+        $comentario->post_id = $request->post_id;
         $comentario->nome = $request->nome;
         $comentario->email = $request->email;
         $comentario->comentario = $request->comentario;
