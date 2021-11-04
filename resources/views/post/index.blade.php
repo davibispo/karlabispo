@@ -47,7 +47,7 @@
                 
                 <div class="btn">
                     <a href="{{ route('blog.index') }}">
-                        <button class="btn btn-outline-secondary">Página do Blog</button>
+                        <button class="btn btn-outline-secondary">Ir para Página do Blog</button>
                     </a>
                 </div>
 

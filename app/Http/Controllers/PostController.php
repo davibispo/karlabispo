@@ -47,7 +47,7 @@ class PostController extends Controller
         $post->categoria = $request->categoria;
 
         if($request->imagem->isValid()){
-            $nameFile = Str::of($request->titulo)->slug('-') . '.' .$request->imagem->GetClientOriginalExtension();
+            $nameFile = Str::of($request->titulo)->slug('-').date('his').'.' .$request->imagem->GetClientOriginalExtension();
             $imagem = $request->imagem->storeAs('public/posts', $nameFile);
             $imagem = str_replace('public/','',$imagem);
             $post['imagem'] = $imagem;
@@ -99,6 +99,14 @@ class PostController extends Controller
         $post->texto = $request->texto;
         $post->resumo = $request->resumo;
         $post->categoria = $request->categoria;
+
+        if($request->imagem->isValid()){
+            $nameFile = Str::of($request->titulo)->slug('-').date('his').'.' .$request->imagem->GetClientOriginalExtension();
+            $imagem = $request->imagem->storeAs('public/posts', $nameFile);
+            $imagem = str_replace('public/','',$imagem);
+            $post['imagem'] = $imagem;
+
+        }
         
         $post->update();
 

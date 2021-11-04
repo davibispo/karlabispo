@@ -5,8 +5,10 @@
 <!-- ======= Blog Single Section ======= -->
 <section id="blog" class="blog">
     <div class="container" data-aos="fade-up">
-        <a href="{{ route('blog.index') }}" class="btn btn-outline-secondary btn-sm">Página inicial do Blog</a>
-        <hr>
+        <div class="section-title">
+            <a href="{{ route('blog.index') }}" class=""><h2>Blog Raízes da Infância</h2></a>
+        </div>
+
         <div class="row">
 
         <div class="col-lg-8 entries">

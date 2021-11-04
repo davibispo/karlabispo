@@ -21,9 +21,7 @@ class BlogController extends Controller
         $todos = Post::all()->where('ativo', 1)->sortByDesc('id');
         $categorias = DB::table('posts')->select('categoria')->where('ativo',1)->distinct()->get();
 
-        $comentarioQtde = DB::table('comentarios')->select('id')->distinct()->count();
-        
-        return view('blog.index', compact('posts','todos','categorias','comentarioQtde'));
+        return view('blog.index', compact('posts','todos','categorias'));
     }
 
     /**
@@ -56,7 +54,7 @@ class BlogController extends Controller
     public function show($id)
     {   
         $post = Post::where('id', $id)->first();
-        $posts = Post::all()->where('ativo', 1);
+        $posts = Post::all()->where('ativo', 1)->sortByDesc('id');
         $categorias = DB::table('posts')->select('categoria')->distinct()->get();
         $comentarios = Comentario::all()->where('ativo', 1);
         $respostas = Resposta::all()->where('ativo', 1);
