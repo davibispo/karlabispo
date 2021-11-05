@@ -7,6 +7,7 @@
     <div class="container" data-aos="fade-up">
         <div class="section-title">
             <a href="{{ route('blog.index') }}" class=""><h2>Blog Raízes da Infância</h2></a>
+            <p></p>
         </div>
 
         <div class="row">

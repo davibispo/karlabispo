@@ -32,24 +32,27 @@
         <!-- Latest compiled and minified CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">       
         
+        <!-- Bootstrap icon --> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
         <!-- Template Main CSS File -->
         <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
     </head>
     <body class="antialiased">
         
-        <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-        <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+        <!-- <button type="button" class="mobie-nav-toggle d-xl-none"><i class="bi bi-list mobie-nav-toggle"></i></button> -->
+        <i class="bi bi-list mobie-nav-toggle d-xl-none"></i>
         <!-- ======= Header ======= -->
         <header id="header" class="d-flex flex-column justify-content-center">
 
             <nav id="navbar" class="navbar nav-menu">
             <ul>
-                <li><a href="{{route('welcome')}}" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Início</span></a></li>
-                <li><a href="{{route('welcome')}}#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre mim</span></a></li>
-                <li><a href="{{route('welcome')}}#portfolio" class="nav-link scrollto"><i class="bx bx-book"></i> <span>Livraria</span></a></li>
-                <li><a href="{{route('welcome')}}" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Serviços</span></a></li>
-                <li><a href="{{route('welcome')}}#contact" class="nav-link scrollto"><i class="bx bx-send"></i> <span>Contato</span></a></li>
+                <li><a href="{{route('welcome')}}" class="nav-link scrollto"><i class="bi bi-house"></i> <span>Início</span></a></li>
+                <li><a href="{{route('welcome')}}#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>Sobre mim</span></a></li>
+                <li><a href="{{route('welcome')}}#portfolio" class="nav-link scrollto"><i class="bi bi-book"></i> <span>Livraria</span></a></li>
+                <li><a href="{{route('welcome')}}" class="nav-link scrollto"><i class="bi bi-hdd-stack"></i> <span>Serviços</span></a></li>
+                <li><a href="{{route('welcome')}}#contact" class="nav-link scrollto"><i class="bi bi-send"></i> <span>Contato</span></a></li>
             </ul>
             </nav><!-- .nav-menu -->
 
@@ -67,10 +70,10 @@
             <h3>Karla Bispo</h3>
             <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
             <div class="social-links">
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="https://www.instagram.com/raizesdainfancia/" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5582993487949" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-                <a href="#" class="telegram"><i class="bx bxl-telegram"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/raizesdainfancia/" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5582993487949" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+                <a href="#" class="telegram"><i class="bi bi-telegram"></i></a>
             </div>
             <div class="copyright">
                 &copy; Copyright <strong><span>Karla Bispo</span></strong>. Todos os direitos reservados
@@ -84,7 +87,7 @@
                         @auth
                             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Admin</a>
                         @else
-                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><i class="bx bx-user"></i></a>
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><i class="bi bi-user"></i></a>
     
                             @if (Route::has('register'))
                                 <!--<a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>-->

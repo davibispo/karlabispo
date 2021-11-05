@@ -18,7 +18,7 @@ class BlogController extends Controller
     public function index()
     {
         $posts = Post::where('ativo', 1)->latest()->paginate(3);
-        $todos = Post::all()->where('ativo', 1)->sortByDesc('id');
+        $todos = Post::all()->where('ativo', 1)->sortByDesc('id')->take(5);
         $categorias = DB::table('posts')->select('categoria')->where('ativo',1)->distinct()->get();
 
         return view('blog.index', compact('posts','todos','categorias'));
