@@ -7,13 +7,13 @@
 
         <div class="section-title">
           <a href="{{ route('blog.index') }}"><h2>BLOG RAÍZES DA INFÂNCIA</h2></a>
+          <h5>Artigos sobre <b>{{ $categoria }}</b></h5>
         </div>
 
         <div class="row">
           <div class="col-lg-8 entries">
             
             @foreach ($posts as $post)    
-            <h5>Artigos sobre <b>{{ $post->categoria }}</b></h5>
             <article class="entry">
               
               <div class="entry-img">
