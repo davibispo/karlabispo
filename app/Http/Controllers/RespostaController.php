@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Resposta;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RespostaController extends Controller
 {
@@ -64,7 +65,9 @@ class RespostaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $resposta = Resposta::where('id', $id);
+
+        return view('resposta.update', compact('resposta'));
     }
 
     /**
@@ -76,7 +79,18 @@ class RespostaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $resposta = Resposta::where('id', $id)->first();
+        
+        $resposta->nome = auth()->user()->name;
+        $resposta->comentario_id = $request->comentario_id;
+        $resposta->resposta = $request->resposta;
+        
+        //recupera o post_id para voltar a rota do post comentado
+        $postId = DB::table('comentarios')->where('id', $resposta->comentario_id)->value('post_id');
+
+        $resposta->update();
+
+        return redirect()->route('blog.show', $postId);
     }
 
     /**

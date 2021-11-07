@@ -48,27 +48,24 @@
               {{ $posts->links() }}
             </div>
 
-
           </div><!-- End blog entries list -->
 
           <div class="col-lg-4">
 
             <div class="sidebar">
 
-              <h3 class="sidebar-title">Busca</h3>
-              <div class="sidebar-item search-form">
-                  <form action="">
-                  <input type="text">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-                  </form>
-              </div><!-- End sidebar search formn-->
+              <div class="sidebar-item">
+                <div class="" style="text-align: center">
+                  <img src="{{ asset('assets/img/perfil-blog.png') }}"  alt="" style="width: 200px;">
+                </div>
+              </div>
 
               <h3 class="sidebar-title">Categorias</h3>
               <div class="sidebar-item categories">
                 <ul>
                   @foreach ($categorias as $item)  
                   <li>
-                    <a href="#">{{ $item->categoria }} 
+                    <a href="{{ route('blog.categoria', $item->categoria) }}">{{ $item->categoria }} 
                       <span>
                         ({{ DB::table('posts')->select('categoria')->where('ativo',1)->where('categoria', $item->categoria)->count('categoria') }})
                       </span>

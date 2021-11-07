@@ -100,6 +100,10 @@ class BlogController extends Controller
 
     public function categoria($id)
     {
-        //$categoria = Post::where('id', $)
+        $posts = Post::where('ativo', 1)->where('categoria',$id)->latest()->paginate(3);
+        $todos = Post::all()->where('ativo', 1)->sortByDesc('id')->take(5);
+        $categorias = DB::table('posts')->select('categoria')->where('ativo',1)->distinct()->get();
+
+        return view('blog.categoria', compact('posts','todos','categorias'));
     }
 }

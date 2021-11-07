@@ -39,7 +39,7 @@
             </article><!-- End blog entry -->
 
             <div class="blog-author d-flex align-items-center">
-            <img src="assets/img/blog/blog-author.jpg" class="rounded-circle float-left" alt="">
+            <img src="{{ asset("assets/img/perfil-blog.png") }}" class="rounded-circle float-left" alt="">
             <div>
                 <h4>Karla Bispo</h4>
                 <div class="social-links">
@@ -68,11 +68,11 @@
                     <div>
                         <h5><b>{{ $comentario->nome }}</b>
                             @if (Auth::check() && (DB::table('users')->select('status')->where('status', 9)->value('status') == '9'))
-                            <a href="#" class="reply" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-reply-fill"></i> Responder</a>
+                            <a href="#" class="reply" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-reply-fill"></i> Responder</a></h5>
                             @endif
                             <!-- The Modal -->
                             <div class="modal" id="myModal">
-                                <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
                                     <div class="modal-content">
 
                                     <!-- Modal Header -->
@@ -114,9 +114,42 @@
                     @foreach ($respostas as $resposta)
                     @if ($resposta->comentario_id == $comentario->id)
                     <div class="d-flex">
-                        <div class="comment-img"><img src="assets/img/blog/comments-3.jpg" alt=""></div>
                         <div>
-                            <h5><b>{{ $resposta->nome }}</b></h5>
+                            <h5><b>{{ $resposta->nome }}</b>
+                            @if (Auth::check() && (DB::table('users')->select('status')->where('status', 9)->value('status') == '9'))
+                            <a href="#" class="reply" data-bs-toggle="modal" data-bs-target="#myModalEditarResposta"><i class="bi bi-pencil"></i> Editar</a></h5>
+                            @endif
+                            <!-- The Modal -->
+                            <div class="modal" id="myModalEditarResposta">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Editar Resposta de Comentário</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        {{ Form::model($resposta, ['method'=>'PATCH', 'action'=>['App\Http\Controllers\RespostaController@update', $resposta->id], 'class'=>'form-horizontal']) }}                                        
+                                        <div class="row">
+                                            <div class="col form-group">
+                                                {{ Form::textarea('resposta', null, array('class' =>'form-control', 'cols' => 20, 'rows' =>4, 'required' => '', 'placeholder'=>'Sua resposta', 'maxlength' => ""))}}
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="comentario_id" value="{{ $comentario->id }}">
+                                        <br>
+                                        <div class="col form-group">
+                                            {{ Form::submit('Salvar Edição', ['class'=>'btn btn-secondary btn-sm']) }}
+                                        </div>
+                                        {{ Form::close() }}
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end Modal -->
                             <i><time datetime="2020-01-01">{{ date('d-m-Y', strtotime($resposta->created_at)) }}</time></i>
                             <p>{{ $resposta->resposta }}</p>
                         </div>
@@ -159,21 +192,21 @@
         <div class="col-lg-4">
 
             <div class="sidebar">
-
+                <!--
             <h3 class="sidebar-title">Busca</h3>
             <div class="sidebar-item search-form">
                 <form action="">
                 <input type="text">
                 <button type="submit"><i class="bi bi-search"></i></button>
                 </form>
-            </div><!-- End sidebar search formn-->
+            </div> End sidebar search formn-->
 
             <h3 class="sidebar-title">Categorias</h3>
             <div class="sidebar-item categories">
                 <ul>
                     @foreach ($categorias as $item)  
                     <li>
-                    <a href="#">{{ $item->categoria }} 
+                    <a href="{{ route('blog.categoria', $item->categoria) }}">{{ $item->categoria }} 
                         <span>
                         ({{ DB::table('posts')->select('categoria')->where('ativo',1)->where('categoria', $item->categoria)->count('categoria') }})
                         </span>

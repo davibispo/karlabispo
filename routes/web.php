@@ -32,7 +32,7 @@ Route::resource('loja', LojaController::class);
 Route::resource('links', LinkController::class);
 Route::resource('contato', ContatoController::class);
 Route::resource('clinica', ClinicaController::class);
-Route::post('blog/categoria', [BlogController::class, 'categoria'])->name('blog.categoria');
+Route::get('blog/categoria/{id}', [BlogController::class, 'categoria'])->name('blog.categoria');
 Route::resource('blog', BlogController::class);
 Route::resource('site', SiteController::class);
 Route::resource('raizes_da_infancia', RaizesController::class);
