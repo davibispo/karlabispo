@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comentario;
 use App\Models\Resposta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -25,7 +26,8 @@ class RespostaController extends Controller
      */
     public function create()
     {
-        //
+        //dd($id);
+        return view('respostas.create');
     }
 
     /**
@@ -42,8 +44,12 @@ class RespostaController extends Controller
         $resposta->comentario_id = $request->comentario_id;
         $resposta->resposta = $request->resposta;
 
+        $comentarioPost = DB::table('comentarios')->select('post_id')->where('id', $resposta->comentario_id)->where('ativo', 1)->value('post_id');
+        $postId = DB::table('posts')->select('id')->where('id', $comentarioPost)->value('id');
+
         $resposta->save();
-        return redirect()->back();
+
+        return redirect()->route('blog.show', $postId);
     }
 
     /**

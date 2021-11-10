@@ -68,16 +68,16 @@
                     <div>
                         <h5><b>{{ $comentario->nome }}</b>
                             @if (Auth::check() && (DB::table('users')->select('status')->where('status', 9)->value('status') == '9'))
-                            <a href="#" class="reply" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-reply-fill"></i> Responder</a></h5>
+                            <a href="#" class="reply" data-bs-toggle="modal" data-bs-target="#myModal{{ $comentario->id }}"><i class="bi bi-reply-fill"></i> Responder</a></h5>
                             @endif
                             <!-- The Modal -->
-                            <div class="modal" id="myModal">
+                            <div class="modal" id="myModal{{ $comentario->id }}">
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
                                     <div class="modal-content">
 
                                     <!-- Modal Header -->
                                     <div class="modal-header">
-                                        <h4 class="modal-title">Responder Comentário</h4>
+                                        <h4 class="modal-title">Responder Comentário de {{ $comentario->nome }}</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
 

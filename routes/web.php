@@ -30,6 +30,7 @@ Route::resource('videos', VideosController::class);
 Route::resource('palestras', PalestraController::class);
 Route::resource('loja', LojaController::class);
 Route::resource('links', LinkController::class);
+Route::get('contato/send-mail', [ContatoController::class, 'sendMail']);
 Route::resource('contato', ContatoController::class);
 Route::resource('clinica', ClinicaController::class);
 Route::get('blog/categoria/{id}', [BlogController::class, 'categoria'])->name('blog.categoria');

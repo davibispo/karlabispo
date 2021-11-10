@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TestMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContatoController extends Controller
 {
@@ -81,4 +83,17 @@ class ContatoController extends Controller
     {
         //
     }
+
+    public function sendMail()
+    {
+        $details = [
+            'title' => 'Mail from Surfside Media',
+            'body' => 'Este é um teste para o gmail.'
+        ];
+
+        Mail::to("davibispo.sud@gmail.com")->send(new TestMail($details));
+
+        return "E-mail Sent";
+    }
+
 }
