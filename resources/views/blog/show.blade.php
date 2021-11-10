@@ -27,7 +27,7 @@
             <div class="entry-meta">
                 <ul>
                 <li class="d-flex align-items-center"><i class="bi bi-person"></i>{{ $post->autor }}</li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ date('d-m-Y', strtotime($post->created_at)) }}</li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ date('d/m/Y', strtotime($post->created_at)) }}</li>
                 <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> {{ $comentarioQtde }} Comentário(s)</li>
                 </ul>
             </div>
@@ -104,11 +104,10 @@
                             <!-- end Modal -->
   
                         </h5>
-                        <i><time datetime="01-01-2020">{{ date('d-m-Y', strtotime($comentario->created_at)) }}</time></i>
+                        <i><time datetime="01-01-2020">{{ date('d/m/Y', strtotime($comentario->created_at)) }}</time></i>
                         <p>{{ $comentario->comentario }}</p>
                     </div>
                 </div>
-
                 
                 <div id="comment-reply-1" class="comment comment-reply">
                     @foreach ($respostas as $resposta)
@@ -117,16 +116,16 @@
                         <div>
                             <h5><b>{{ $resposta->nome }}</b>
                             @if (Auth::check() && (DB::table('users')->select('status')->where('status', 9)->value('status') == '9'))
-                            <a href="#" class="reply" data-bs-toggle="modal" data-bs-target="#myModalEditarResposta"><i class="bi bi-pencil"></i> Editar</a></h5>
+                            <a href="#" class="reply" data-bs-toggle="modal" data-bs-target="#myModal{{ $resposta->id }}"><i class="bi bi-pencil"></i> Editar</a></h5>
                             @endif
                             <!-- The Modal -->
-                            <div class="modal" id="myModalEditarResposta">
+                            <div class="modal" id="myModal{{ $resposta->id }}">
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
                                     <div class="modal-content">
 
                                     <!-- Modal Header -->
                                     <div class="modal-header">
-                                        <h4 class="modal-title">Editar Resposta de Comentário</h4>
+                                        <h4 class="modal-title">Editar Resposta de Comentário de {{ $comentario->nome }}</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
 
@@ -150,7 +149,7 @@
                                 </div>
                             </div>
                             <!-- end Modal -->
-                            <i><time datetime="2020-01-01">{{ date('d-m-Y', strtotime($resposta->created_at)) }}</time></i>
+                            <i><time datetime="2020-01-01">{{ date('d/m/Y', strtotime($resposta->created_at)) }}</time></i>
                             <p>{{ $resposta->resposta }}</p>
                         </div>
                     </div>
@@ -222,13 +221,11 @@
                 <div class="post-item clearfix">
                     <img src="{{ url("storage/{$post->imagem}") }}" alt="{{ $post->titulo }}" style="width: 60px">
                     <h4><a href="{{ route('blog.show', $post->id) }}">{{ $post->titulo }}</a></h4>
-                    <time datetime="2020-01-01">{{ date('d-m-Y', strtotime($post->created_at)) }}</time>
+                    <time datetime="2020-01-01">{{ date('d/m/Y', strtotime($post->created_at)) }}</time>
                 </div>
                 @endforeach
             </div><!-- End sidebar recent posts-->
-
             </div><!-- End sidebar -->
-
         </div><!-- End blog sidebar -->
 
         </div>

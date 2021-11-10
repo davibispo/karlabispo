@@ -27,7 +27,7 @@
               <div class="entry-meta">
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i>{{ $post->autor }}</li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ date('d-m-Y', strtotime($post->created_at)) }}</li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ date('d/m/Y', strtotime($post->created_at)) }}</li>
                   <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i>{{ DB::table('comentarios')->where('post_id', $post->id)->select('id')->distinct()->count() }} Comentário(s)</li>
                 </ul>
               </div>
@@ -83,7 +83,7 @@
                 <div class="post-item clearfix">
                   <img src="{{ url("storage/{$item->imagem}") }}" alt="{{ $item->titulo }}" style="width: 60px">
                   <h4><a href="{{ route('blog.show', $post->id) }}">{{ $item->titulo }}</a></h4>
-                  <time datetime="2020-01-01">{{ date('d-m-Y', strtotime($item->created_at)) }}</time>
+                  <time datetime="2020-01-01">{{ date('d/m/Y', strtotime($item->created_at)) }}</time>
                 </div>
                 @endforeach
               </div><!-- End sidebar recent posts-->
