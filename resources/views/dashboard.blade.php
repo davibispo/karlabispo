@@ -12,13 +12,12 @@
                     Você está no logado no ambiente administrativo!
                 </div>
             </div>
-
-            <ul>
-                <li><a href="{{ route('livraria.create') }}">Administrar Livraria</a></li>
-                <li><a href="{{ route('post.index') }}">Administrar Blog</a></li>
-            </ul>
-            
-            
+            <br>
+            <div class="d-grid gap-3">
+                <a href="{{ route('livraria.create') }}"><button type="button" class="btn btn-outline-secondary btn-block">Livraria | Adicionar Produto</button></a>
+                <a href="{{ route('post.index') }}"><button type="button" class="btn btn-outline-secondary btn-block">Blog | Gerenciar Artigos</button></a>
+            </div>
+                       
         </div>
     </div>
 </x-app-layout>

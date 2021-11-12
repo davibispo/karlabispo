@@ -42,12 +42,11 @@
 
             </article><!-- End blog entry -->
             @endforeach
-
-
-            <div class="blog-pagination">
+            
+            <div style="width:300px">
               {{ $posts->links() }}
             </div>
-
+            
           </div><!-- End blog entries list -->
 
           <div class="col-lg-4">

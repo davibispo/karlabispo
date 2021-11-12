@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\TestMail;
+use App\Models\Contato;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -36,7 +37,16 @@ class ContatoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contato = new Contato();
+
+        $contato->nome = $request->nome;
+        $contato->email = $request->email;
+        $contato->assunto = $request->assunto;
+        $contato->mensagem = $request->mensagem;
+
+        $contato->save();
+
+        return redirect()->back()->with('status','Mensagem enviada com sucesso!');
     }
 
     /**

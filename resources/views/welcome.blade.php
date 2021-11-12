@@ -92,7 +92,7 @@
                 <div class="row">
                 <div class="col-lg-6">
                     <ul>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.karlabipo.com.br</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.karlaBispo.com.br</span></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>Telefone:</strong> <span>(82) 99348-7949</span></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>Cidade:</strong> <span>Maceió, AL</span></li>
                     </ul>
@@ -100,7 +100,7 @@
                 <div class="col-lg-6">
                     <ul>
                     <li><i class="bi bi-chevron-right"></i> <strong>Grau escolar:</strong> <span>Pós graduada</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>E-mail:</strong> <span>karlabipo.psi@hotmail.com</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>E-mail:</strong> <span>karlaBispo.psi@hotmail.com</span></li>
                     </ul>
                 </div>
                 </div>
@@ -138,7 +138,7 @@
 
             <div class="row">
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
                 <div class="icon-box iconbox-blue">
                 <a href="{{route('raizes_da_infancia.index')}}">
                     <div class="icon">
@@ -153,7 +153,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
                 <div class="icon-box iconbox-orange ">
                 <a href="{{route('palestras.index')}}">
                     <div class="icon">
@@ -164,11 +164,11 @@
                     </div>
                     <h4>Palestras</h4>
                 </a>
-                <p>Conteúdo disponibiizado para ser apresentado para grupos de pessoas que desejam desenvolver a capacidade de educar seus filhos da melhor forma.</p>
+                <p>Conteúdo disponibiizado para ser apresentado para grupos de pessoas que desejam desenvolver-se.</p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="col-lg-4 col-md-6 align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
                 <div class="icon-box iconbox-pink">
                 <a href="{{route('clinica.index')}}">
                     <div class="icon">
@@ -182,7 +182,8 @@
                 <p>Tempo precioso de escuta e instrução para superar dificuldades da crianças e adolescentes.</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            
+            <div class="col-lg-4 col-md-6 align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
                 <div class="icon-box iconbox-yellow">
                     <a href="{{ route('curso.index') }}">
                         <div class="icon">
@@ -197,20 +198,20 @@
                 </div>
             </div>
             
-            <!--
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
                 <div class="icon-box iconbox-red">
-                <div class="icon">
-                    <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
-                    </svg>
-                    <i class="bi bi-slideshow"></i>
-                </div>
-                <h4><a href="">Dele Cardo</a></h4>
-                <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                    <div class="icon">
+                        <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
+                        </svg>
+                        <i class="bi bi-tablet"></i>
+                    </div>
+                    <h4><a href="">e-Books</a></h4>
+                    <p>Conteúdos Digitais Gratuitos</p>
                 </div>
             </div>
-
+            
+            <!--
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
                 <div class="icon-box iconbox-teal">
                 <div class="icon">
@@ -251,7 +252,7 @@
                 <div class="email">
                     <i class="bi bi-envelope"></i>
                     <h4>Email:</h4>
-                    <p>karlabipo.psi@hotmail.com</p>
+                    <p>karlaBispo.psi@hotmail.com</p>
                 </div>
 
                 <div class="phone">
@@ -266,28 +267,34 @@
 
             <div class="col-lg-8 mt-5 mt-lg-0">
 
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                {!! Form::open(['method'=>'POST', 'action'=>'App\Http\Controllers\ContatoController@store', 'class'=>'form-horizontal']) !!}
+                
                 <div class="row">
                     <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" required>
+                        {!! Form::text('nome', null, ['class'=>'form-control', 'required', 'placeholder'=>'Seu Nome']) !!}
                     </div>
                     <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" required>
+                        {!! Form::text('email', null, ['class'=>'form-control', 'required', 'placeholder'=>'Seu E-mail']) !!}
                     </div>
                 </div>
                 <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
+                    {!! Form::text('assunto', null, ['class'=>'form-control', 'required', 'placeholder'=>'Assunto']) !!}
                 </div>
                 <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Menssagem" required></textarea>
+                    {{ Form::textarea('mensagem', null, ['class' =>'form-control input', 'cols'=> 20, 'rows'=>5, 'required', 'maxlength'=>''])}}
                 </div>
-                <div class="my-3">
-                    <div class="loading">Carregando</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Sua mensagem foi enviada com sucesso. Obrigado!</div>
+                
+                <div class=" form-group mt-3 text-center">
+                    {!! Form::submit('Enviar mensagem', ['class'=>'btn btn-outline-secondary']) !!}
                 </div>
-                <div class="text-center"><button type="submit">Enviar mensagem</button></div>
-                </form>
+                
+                {!! Form::close() !!}
+
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
 
             </div>
 
@@ -301,7 +308,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="container">
-        <h3>Karla bipo</h3>
+        <h3>Karla Bispo</h3>
         <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
         <div class="social-links">
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -312,10 +319,10 @@
 
         </div>
         <div class="copyright">
-            &copy; Copyright <strong><span>Karla bipo</span></strong>. Todos os direitos reservados
+            &copy; Copyright <strong><span>Karla Bispo</span></strong>. Todos os direitos reservados
         </div>
         <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Desenvolvido por <a href="#">davibipo.com.br</a>
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Desenvolvido por <a href="#">daviBispo.com.br</a>
         </div>
         <div class="login">
             @if (Route::has('login'))
@@ -351,7 +358,6 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
 
     </div>
 </body>
