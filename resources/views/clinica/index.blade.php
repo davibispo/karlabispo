@@ -7,7 +7,7 @@
 
             <div class="section-title">
                 <h2>Atendimento Clínico</h2>
-                <p>Em desenvolvimento...</p>
+                <p>Agendamento através do Whatsapp</p>
             </div>
 
             <div class="row">

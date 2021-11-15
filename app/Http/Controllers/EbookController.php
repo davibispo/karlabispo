@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\TestMail;
-use App\Models\Contato;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 
-class ContatoController extends Controller
+class EbookController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +13,7 @@ class ContatoController extends Controller
      */
     public function index()
     {
-        return view('contato.index');
+        //
     }
 
     /**
@@ -37,16 +34,7 @@ class ContatoController extends Controller
      */
     public function store(Request $request)
     {
-        $contato = new Contato();
-
-        $contato->nome = $request->nome;
-        $contato->email = $request->email;
-        $contato->assunto = $request->assunto;
-        $contato->mensagem = $request->mensagem;
-
-        $contato->save();
-
-        return redirect()->back()->with('status','Mensagem enviada com sucesso!');
+        //
     }
 
     /**
@@ -93,19 +81,4 @@ class ContatoController extends Controller
     {
         //
     }
-
-    public function sendMail(Request $request)
-    {
-        $details = [
-            'nome' => $request->nome,
-            'email' => $request->email,
-            'assunto' => $request->assunto,
-            'mensagem' => $request->mensagem,
-        ];
-
-        Mail::to("davibispo.sud@gmail.com")->send(new TestMail($details));
-
-        return redirect()->route('welcome','#contact')->with('status', 'Mensagme enviada com sucesso. Obrigada!');
-    }
-
 }

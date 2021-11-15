@@ -38,6 +38,14 @@
         <!-- Template Main CSS File -->
         <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
+        <!-- TinyMCE -->
+        <script src="https://cdn.tiny.cloud/1/ldxg4bwqlty3ullvgvpa9q31j2zhn9tal6fzx38q6xa9826k/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>
+            tinymce.init({
+                selector: '#textarea',
+                menubar: false,
+            });
+        </script>
     </head>
     <body class="antialiased">
         
@@ -116,8 +124,7 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
-
-
+      
         </div>
     </body>
 </html>

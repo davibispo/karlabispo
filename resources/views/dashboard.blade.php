@@ -14,8 +14,8 @@
             </div>
             <br>
             <div class="d-grid gap-3">
-                <a href="{{ route('livraria.create') }}"><button type="button" class="btn btn-outline-secondary btn-block">Livraria | Adicionar Produto</button></a>
                 <a href="{{ route('post.index') }}"><button type="button" class="btn btn-outline-secondary btn-block">Blog | Gerenciar Artigos</button></a>
+                <a href="{{ route('livraria.create') }}"><button type="button" class="btn btn-outline-secondary btn-block">Livraria | Adicionar Produto</button></a>
             </div>
                        
         </div>

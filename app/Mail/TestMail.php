@@ -30,6 +30,6 @@ class TestMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Teste de E-mail Surfside Media')->view('contato.send-mail');
+        return $this->subject('Mensagem vinda do Site Karla Bispo')->view('contato.send-mail');
     }
 }

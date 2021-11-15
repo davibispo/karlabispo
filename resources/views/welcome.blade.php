@@ -236,67 +236,64 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-            <h2>Contato</h2>
+                <h2>Contato</h2>
             </div>
 
             <div class="row mt-1">
-
-            <div class="col-lg-4">
-                <div class="info">
-                <div class="address">
-                    <i class="bi bi-geo-alt"></i>
-                    <h4>Localização:</h4>
-                    <p>Maceió, Alagoas</p>
-                </div>
-
-                <div class="email">
-                    <i class="bi bi-envelope"></i>
-                    <h4>Email:</h4>
-                    <p>karlaBispo.psi@hotmail.com</p>
-                </div>
-
-                <div class="phone">
-                    <i class="bi bi-phone"></i>
-                    <h4>Telefone:</h4>
-                    <p>+55 (82) 99348-7949</p>
-                </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-8 mt-5 mt-lg-0">
-
-                {!! Form::open(['method'=>'POST', 'action'=>'App\Http\Controllers\ContatoController@store', 'class'=>'form-horizontal']) !!}
                 
-                <div class="row">
-                    <div class="col-md-6 form-group">
-                        {!! Form::text('nome', null, ['class'=>'form-control', 'required', 'placeholder'=>'Seu Nome']) !!}
-                    </div>
-                    <div class="col-md-6 form-group mt-3 mt-md-0">
-                        {!! Form::text('email', null, ['class'=>'form-control', 'required', 'placeholder'=>'Seu E-mail']) !!}
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>Localização:</h4>
+                            <p>Maceió, Alagoas</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>karlaBispo.psi@hotmail.com</p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>Telefone:</h4>
+                            <p>+55 (82) 99348-7949</p>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group mt-3">
-                    {!! Form::text('assunto', null, ['class'=>'form-control', 'required', 'placeholder'=>'Assunto']) !!}
-                </div>
-                <div class="form-group mt-3">
-                    {{ Form::textarea('mensagem', null, ['class' =>'form-control input', 'cols'=> 20, 'rows'=>5, 'required', 'maxlength'=>''])}}
-                </div>
-                
-                <div class=" form-group mt-3 text-center">
-                    {!! Form::submit('Enviar mensagem', ['class'=>'btn btn-outline-secondary']) !!}
-                </div>
-                
-                {!! Form::close() !!}
 
-                @if (session('status'))
-                    <div class="alert alert-success">
-                        {{ session('status') }}
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {!! Form::open(['method'=>'POST', 'action'=>'App\Http\Controllers\ContatoController@sendMail', 'class'=>'form-horizontal']) !!}
+                    
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            {!! Form::text('nome', null, ['class'=>'form-control', 'required', 'placeholder'=>'Seu Nome']) !!}
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            {!! Form::text('email', null, ['class'=>'form-control', 'required', 'placeholder'=>'Seu E-mail']) !!}
+                        </div>
                     </div>
-                @endif
+                    <div class="form-group mt-3">
+                        {!! Form::text('assunto', null, ['class'=>'form-control', 'required', 'placeholder'=>'Assunto']) !!}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{ Form::textarea('mensagem', null, ['class' =>'form-control input', 'cols'=> 20, 'rows'=>5, 'required', 'maxlength'=>''])}}
+                    </div>
+                    
+                    <div class=" form-group mt-3 text-center">
+                        {!! Form::submit('Enviar mensagem', ['class'=>'btn btn-outline-secondary']) !!}
+                    </div>
+                    
+                    {!! Form::close() !!}
 
-            </div>
+                </div>
 
             </div>
 

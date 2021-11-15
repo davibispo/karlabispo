@@ -42,7 +42,7 @@ class PostController extends Controller
 
         $post->autor = Auth::user()->name;
         $post->titulo = $request->titulo;
-        $post->texto = $request->texto;
+        $post->texto = htmlspecialchars($request->texto);
         $post->resumo = $request->resumo;
         $post->categoria = $request->categoria;
 
@@ -121,7 +121,10 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::where('id', $id);
+        $post->delete();
+
+        return redirect()->back();
     }
 
     public function ativar($id)
