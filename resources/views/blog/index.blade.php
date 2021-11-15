@@ -43,9 +43,10 @@
             </article><!-- End blog entry -->
             @endforeach
             
-            <div style="width:300px">
-              {{ $posts->links() }}
+            <div class="" style="">
+              {{ $posts->links("pagination::bootstrap-4") }}
             </div>
+            
             
           </div><!-- End blog entries list -->
 
