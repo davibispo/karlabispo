@@ -43,9 +43,11 @@
             <div>
                 <h4>Karla Bispo</h4>
                 <div class="social-links">
-                <a href="https://twitters.com/#"><i class="bi bi-twitter"></i></a>
+                <a href="https://twitters.com/#"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://instagram.com/#"><i class="bi bi-instagram"></i></a>
                 <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
-                <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
+                <a href="https://instagram.com/#"><i class="bi bi-telegram"></i></a>
+                <a href="https://instagram.com/#"><i class="bi bi-youtube"></i></a>
                 </div>
                 <p>
                 Itaque quidem optio quia voluptatibus dolorem dolor. 

@@ -8,6 +8,7 @@
             <div class="section-title">
                 <h2>Livraria</h2>
                 <p>Aqui você encontra os melhores livros para desfrutar de leituras interessantes e enriquecedoras.</p>
+                <p><i>Se não encontrou o que procurava, <a href="https://amzn.to/3Hl7fN3" target="_blank" class="link">clique aqui.</a></i></p>
             </div>
 
             <div class="row">

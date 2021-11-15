@@ -7,7 +7,12 @@
 
             <div class="container mt-3">
                 <h2>BLOG | Artigos</h2>
-                <p>Administração de postagens</p>            
+                <p>Administração de postagens</p> 
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif           
                 <table class="table table-striped">
                   <thead>
                     <tr>
@@ -33,6 +38,11 @@
                             @else
                                 <a href="{{ route('post.ativar', $post->id) }}"><i class="bi bi-toggle-off" style="color:red"></i></a>
                             @endif
+                        </td>
+                        <td>
+                            {!! Form::model($post, ['method'=>'DELETE', 'action'=>['App\Http\Controllers\PostController@destroy', $post->id], 'class'=>'form-horizontal']) !!}
+                                {!! Form::submit('Excluir', ['class'=>'btn btn-danger btn-sm', 'style'=>'font-size:10px', 'data-toggle'=>'tooltip', 'title'=>'Excluir'])!!}
+                            {!! Form::close() !!}
                         </td>
                     </tr>
                     @endforeach

@@ -50,7 +50,7 @@
                         {!! Form::label('imagem', 'Imagem:', ['class'=>'col-sm-4 col-form-label text-md-right']) !!}
                         <div class="col-md-12">
                             <div class="input-group input-group-sm">
-                                <input type="file" name="imagem" class="form-control">
+                                <input type="file" name="imagem" required class="form-control">
                             </div>
                         </div>
                     </div>

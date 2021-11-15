@@ -62,7 +62,7 @@
     </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Testimonials Section ======= -->
+    <!-- ======= Testimonials Section ======= 
     <section id="testimonials" class="testimonials section-bg">
     <div class="container" data-aos="fade-up">
 
@@ -84,7 +84,7 @@
                 <i class="bi bi-quote-alt-right quote-icon-right"></i>
                 </p>
             </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End testimonial item 
 
             <div class="swiper-slide">
             <div class="testimonial-item">
@@ -97,7 +97,7 @@
                 <i class="bi bi-quote-alt-right quote-icon-right"></i>
                 </p>
             </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End testimonial item 
 
             <div class="swiper-slide">
             <div class="testimonial-item">
@@ -110,7 +110,7 @@
                 <i class="bi bi-quote-alt-right quote-icon-right"></i>
                 </p>
             </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End testimonial item 
 
             <div class="swiper-slide">
             <div class="testimonial-item">
@@ -123,7 +123,7 @@
                 <i class="bi bi-quote-alt-right quote-icon-right"></i>
                 </p>
             </div>
-            </div><!-- End testimonial item -->
+            </div><!-- End testimonial item 
 
             <div class="swiper-slide">
             <div class="testimonial-item">

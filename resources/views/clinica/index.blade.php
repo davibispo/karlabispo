@@ -7,7 +7,14 @@
 
             <div class="section-title">
                 <h2>Atendimento Clínico</h2>
-                <p>Agendamento através do Whatsapp</p>
+                
+                <div>
+                    <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5582993487949">
+                        <button type="button" class="btn btn-outline-success btn-lg">
+                            <i class="bi bi-whatsapp"></i> Agendamento através do Whatsapp
+                        </button>
+                    </a>
+                </div>
             </div>
 
             <div class="row">

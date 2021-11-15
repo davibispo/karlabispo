@@ -16,12 +16,14 @@ use App\Http\Controllers\{
     LivrariaController,
     ComentarioController,
     RespostaController,
+    EbookController,
 };
 
 Route::middleware(['auth'])->group(function(){
     Route::get('post/ativar/{id}', [PostController::class, 'ativar'])->name('post.ativar');
     Route::resource('post', PostController::class);
 });
+Route::resource('ebooks', EbookController::class);
 Route::resource('respostas', RespostaController::class);
 Route::resource('comentarios', ComentarioController::class);
 Route::resource('livraria', LivrariaController::class);

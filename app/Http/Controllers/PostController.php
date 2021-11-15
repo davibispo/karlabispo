@@ -124,7 +124,7 @@ class PostController extends Controller
         $post = Post::where('id', $id);
         $post->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('status','Post excluído com sucesso!');
     }
 
     public function ativar($id)

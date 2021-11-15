@@ -82,6 +82,7 @@
                 <a href="https://www.instagram.com/raizesdainfancia/" class="instagram"><i class="bi bi-instagram"></i></a>
                 <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5582993487949" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 <a href="#" class="telegram"><i class="bi bi-telegram"></i></a>
+                <a href="#" class="#"><i class="bi bi-youtube"></i></a>
             </div>
             <div class="copyright">
                 &copy; Copyright <strong><span>Karla Bispo</span></strong>. Todos os direitos reservados
