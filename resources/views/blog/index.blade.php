@@ -43,7 +43,7 @@
             </article><!-- End blog entry -->
             @endforeach
             
-            <div class="" style="">
+            <div class="pagination">
               {{ $posts->links("pagination::bootstrap-4") }}
             </div>
             

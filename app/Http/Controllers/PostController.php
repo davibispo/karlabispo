@@ -42,7 +42,7 @@ class PostController extends Controller
 
         $post->autor = Auth::user()->name;
         $post->titulo = $request->titulo;
-        $post->texto = htmlspecialchars($request->texto);
+        $post->texto = $request->texto;
         $post->resumo = $request->resumo;
         $post->categoria = $request->categoria;
 
