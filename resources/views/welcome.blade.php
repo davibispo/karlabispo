@@ -253,7 +253,7 @@
                         <div class="email">
                             <i class="bi bi-envelope"></i>
                             <h4>Email:</h4>
-                            <p>karlaBispo.psi@hotmail.com</p>
+                            <p>contato@karlabispo.com.br</p>
                         </div>
 
                         <div class="phone">

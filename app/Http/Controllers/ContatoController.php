@@ -94,7 +94,7 @@ class ContatoController extends Controller
             'mensagem' => $request->mensagem,
         ];
 
-        Mail::to("davibispo.sud@gmail.com")->send(new TestMail($details));
+        Mail::to("contato@karlabispo.com.br")->send(new TestMail($details));
 
         return redirect()->route('welcome','#contact')->with('status', 'Mensagme enviada com sucesso. Obrigada!');
     }
