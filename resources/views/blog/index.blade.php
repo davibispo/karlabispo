@@ -34,7 +34,7 @@
               </div>
 
               <div class="entry-content">
-                <p>{{ $post->resumo }}<p>
+                <p>{!! $post->resumo !!}<p>
                 <div class="read-more">
                   <a href="{{ route('blog.show', $post->id) }}">Leia Mais</a>
                 </div>

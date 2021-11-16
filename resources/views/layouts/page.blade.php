@@ -42,7 +42,7 @@
         <script src="https://cdn.tiny.cloud/1/ldxg4bwqlty3ullvgvpa9q31j2zhn9tal6fzx38q6xa9826k/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
         <script>
             tinymce.init({
-                selector: '#textarea',
+                selector: 'textarea',
                 menubar: false,
             });
         </script>

@@ -33,7 +33,7 @@
             </div>
 
             <div class="entry-content">
-                {{ $post->texto }}
+               {!! $post->texto  !!}
             </div>
 
             </article><!-- End blog entry -->
@@ -50,10 +50,10 @@
                 <a href="https://instagram.com/#"><i class="bi bi-youtube"></i></a>
                 </div>
                 <p>
-                Itaque quidem optio quia voluptatibus dolorem dolor. 
-                Modi eum sed possimus accusantium. 
-                Quas repellat voluptatem officia numquam sint aspernatur voluptas. 
-                sse et accusantium ut unde voluptas.
+                    Itaque quidem optio quia voluptatibus dolorem dolor. 
+                    Modi eum sed possimus accusantium. 
+                    Quas repellat voluptatem officia numquam sint aspernatur voluptas. 
+                    sse et accusantium ut unde voluptas.
                 </p>
             </div>
             </div><!-- End blog author bio -->
@@ -176,7 +176,7 @@
                 </div>
                 <div class="row">
                     <div class="col form-group">
-                        {{ Form::textarea('comentario', null, array('class' =>'form-control', 'cols' => 20, 'rows' =>4, 'required' => '', 'placeholder'=>'Seu Comentário', 'maxlength' => ""))}}
+                        {{ Form::textarea('comentario', null, ['class' =>'form-control', 'cols' => 20, 'rows' =>4, 'required' => '', 'placeholder'=>'Seu Comentário', 'maxlength' => ''])}}
                     </div>
                 </div>
                 <input type="hidden" name="post_id" value="{{ $post->id }}">
