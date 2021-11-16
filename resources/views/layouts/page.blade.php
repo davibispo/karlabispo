@@ -40,12 +40,7 @@
 
         <!-- TinyMCE -->
         <script src="https://cdn.tiny.cloud/1/ldxg4bwqlty3ullvgvpa9q31j2zhn9tal6fzx38q6xa9826k/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-        <script>
-            tinymce.init({
-                selector: 'textarea',
-                menubar: false,
-            });
-        </script>
+        
     </head>
     <body class="antialiased">
         
@@ -78,9 +73,9 @@
             <h3>Karla Bispo</h3>
             <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
             <div class="social-links">
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/raizesdainfancia/" class="instagram"><i class="bi bi-instagram"></i></a>
                 <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5582993487949" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.instagram.com/raizesdainfancia/" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="telegram"><i class="bi bi-telegram"></i></a>
                 <a href="#" class="#"><i class="bi bi-youtube"></i></a>
             </div>

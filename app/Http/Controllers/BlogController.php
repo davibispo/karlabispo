@@ -55,7 +55,7 @@ class BlogController extends Controller
     {   
         $post = Post::where('id', $id)->first();
         $posts = Post::all()->where('ativo', 1)->sortByDesc('id');
-        $categorias = DB::table('posts')->select('categoria')->distinct()->get();
+        $categorias = DB::table('posts')->select('categoria')->where('ativo',1)->distinct()->get();
         $comentarios = Comentario::all()->where('ativo', 1);
         $respostas = Resposta::all()->where('ativo', 1);
 

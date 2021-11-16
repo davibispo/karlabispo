@@ -67,5 +67,10 @@
         </div>
     </div>
 </div>
-
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        menubar: false,
+    });
+</script>
 @endsection

@@ -16,7 +16,7 @@
 
             <article class="entry entry-single">
 
-            <div class="entry-img">
+            <div class="entry-img mx-auto d-block" style="width:100%; padding-top:20px;">
                 <img src="{{ url("storage/{$post->imagem}") }}" alt="{{ $post->titulo }}" class="img-fluid">
             </div>
 
@@ -176,7 +176,7 @@
                 </div>
                 <div class="row">
                     <div class="col form-group">
-                        {{ Form::textarea('comentario', null, ['class' =>'form-control', 'cols' => 20, 'rows' =>4, 'required' => '', 'placeholder'=>'Seu Comentário', 'maxlength' => ''])}}
+                        {{ Form::textarea('comentario', null, ['class' =>'form-control', 'cols'=> 20, 'required','rows'=>4, 'placeholder'=>'Seu Comentário', 'maxlength' => ''])}}
                     </div>
                 </div>
                 <input type="hidden" name="post_id" value="{{ $post->id }}">
