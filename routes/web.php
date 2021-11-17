@@ -17,11 +17,13 @@ use App\Http\Controllers\{
     ComentarioController,
     RespostaController,
     EbookController,
+    ProdutoController,
 };
 
 Route::middleware(['auth'])->group(function(){
     Route::get('post/ativar/{id}', [PostController::class, 'ativar'])->name('post.ativar');
     Route::resource('post', PostController::class);
+    Route::resource('produtos', ProdutoController::class);
 });
 Route::resource('ebooks', EbookController::class);
 Route::resource('respostas', RespostaController::class);

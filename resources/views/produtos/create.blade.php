@@ -23,7 +23,7 @@
                                 <div class="form-group">
                                     {!! Form::label('codigo_html', 'Código do produto:', ['class'=>'col-md-4 control-label']) !!}
                                     <div class="col-md-12">
-                                        {!! Form::textarea('codigo_html', null, ['class' =>'form-control input', 'cols'=> 20, 'rows'=>10, 'maxlength'=> '','placeholder'=>'Cole aqui o cógio HTML']) !!}
+                                        {!! Form::textarea('codigo_html', null, ['class' =>'form-control input', 'cols'=> 20, 'rows'=>5, 'maxlength'=> '','placeholder'=>'Cole aqui o cógio HTML']) !!}
                                     </div>
                                 </div>
 
@@ -40,9 +40,14 @@
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-4">
                                         {!! Form::submit('Cadastrar', ['class'=>'btn btn-dark']) !!}
+                                        {!! Form::close() !!}
+                                        <a href="{{ route('produtos.index') }}"><button class="btn btn-outline-secondary">Lista de Produtos</button></a>
                                     </div>
                                 </div>
-                                {!! Form::close() !!}
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-4">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

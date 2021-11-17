@@ -14,7 +14,7 @@
             </div>
             <br>
             <div class="d-grid gap-3">
-                <a href="{{ route('loja.create') }}"><button type="button" class="btn btn-outline-secondary btn-block">Loja | Cadastrar Produto</button></a>
+                <a href="{{ route('produtos.create') }}"><button type="button" class="btn btn-outline-secondary btn-block">Loja | Cadastrar Produto</button></a>
                 <a href="{{ route('post.index') }}"><button type="button" class="btn btn-outline-secondary btn-block">Blog | Gerenciar Artigos</button></a>
                 <a href="https://mail.hostinger.com/?clearSession=true&_user=contato@karlabispo.com.br&_ga=2.106084803.1111315649.1637064459-1226415465.1637064459" target="_blank">
                     <button type="button" class="btn btn-outline-secondary btn-block">Gerenciar E-mails</button>
