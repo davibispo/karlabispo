@@ -1,3 +1,4 @@
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -351,6 +352,10 @@ section {
   overflow: hidden;
 }
 
+.section-title .livraria{
+  background-color: yellow;
+}
+
 .section-title {
   text-align: center;
   padding-bottom: 30px;
@@ -496,8 +501,12 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-.portfolio {
-  background-color: #5a6e6f;
+.livraria-link{
+  color: white;
+}
+
+.portfolio-livraria {
+  background: url("../img/books.png") no-repeat;
 }
 
 .portfolio .portfolio-item {

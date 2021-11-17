@@ -33,10 +33,9 @@
 </head>
 
 <body class="antialiased">
-
     <!-- ======= Mobie nav toggle button ======= -->
     <!-- <button type="button" class="mobie-nav-toggle d-xl-none"><i class="bi bi-list mobie-nav-toggle"></i></button> -->
-    <i class="bi bi-list mobie-nav-toggle d-xl-none"></i>
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex flex-column justify-content-center">
 
@@ -44,7 +43,7 @@
         <ul>
             <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house"></i> <span>Início</span></a></li>
             <li><a href="#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>Sobre mim</span></a></li>
-            <li><a href="#portfolio" class="nav-link scrollto"><i class="bi bi-book"></i> <span>Livraria</span></a></li>
+            <li><a href="#portfolio" class="nav-link scrollto"><i class="bi bi-shop-window"></i> <span>Loja</span></a></li>
             <li><a href="#services" class="nav-link scrollto"><i class="bi bi-hdd-stack"></i> <span>Serviços</span></a></li>
             <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-send"></i> <span>Contato</span></a></li>
         </ul>
@@ -114,13 +113,16 @@
         </section><!-- End About Section -->
 
         <!-- ======= Loja ======= -->
-        <section id="portfolio" class="portfolio section-bg">
+        <section id="portfolio" class="portfolio-livraria section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2 style="color: white">Livraria</h2>
-                    <p><i class="bi bi-book"></i></p>
-                    <p><a href="{{ route('livraria.index') }}" class="link">Página da Livraria</a></p>
+                    <h2>
+                        <a href="{{ route('loja.index') }}" class="livraria-link">
+                            Loja
+                            <br>
+                        </a>
+                    </h2>
                 </div>
                 
             </div>
@@ -354,8 +356,6 @@
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-
-    </div>
+    <script src="assets/js/main.js"></script>  
 </body>
 </html>

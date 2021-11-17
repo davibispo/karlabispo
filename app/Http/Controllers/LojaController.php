@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Loja;
 use Illuminate\Http\Request;
 
 class LojaController extends Controller
@@ -13,7 +14,8 @@ class LojaController extends Controller
      */
     public function index()
     {
-        return view('loja.index');
+        $produtos = Loja::all();
+        return view('loja.index', compact('produtos'));
     }
 
     /**
@@ -23,7 +25,7 @@ class LojaController extends Controller
      */
     public function create()
     {
-        //
+        return view('loja.create');
     }
 
     /**
@@ -34,7 +36,16 @@ class LojaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $produto = new Loja();
+        
+        $produto->codigo_html = $request->codigo_html;
+        $produto->descricao = $request->descricao;
+        $produto->imagem = $request->imagem;
+        $produto->categoria = $request->categoria;
+        
+        $produto->save();
+        
+        return redirect()->route('loja.index');
     }
 
     /**
