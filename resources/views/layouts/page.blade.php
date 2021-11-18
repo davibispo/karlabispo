@@ -53,7 +53,7 @@
             <ul>
                 <li><a href="{{route('welcome')}}" class="nav-link scrollto"><i class="bi bi-house"></i> <span>Início</span></a></li>
                 <li><a href="{{route('welcome')}}#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>Sobre mim</span></a></li>
-                <li><a href="{{route('welcome')}}#portfolio" class="nav-link scrollto"><i class="bi bi-shop-window"></i> <span>Loja</span></a></li>
+                <li><a href="{{route('loja.index')}}" class="nav-link scrollto"><i class="bi bi-shop-window"></i> <span>Loja</span></a></li>
                 <li><a href="{{route('welcome')}}" class="nav-link scrollto"><i class="bi bi-hdd-stack"></i> <span>Serviços</span></a></li>
                 <li><a href="{{route('welcome')}}#contact" class="nav-link scrollto"><i class="bi bi-send"></i> <span>Contato</span></a></li>
             </ul>

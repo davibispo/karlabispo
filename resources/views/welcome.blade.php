@@ -43,7 +43,7 @@
         <ul>
             <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house"></i> <span>Início</span></a></li>
             <li><a href="#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>Sobre mim</span></a></li>
-            <li><a href="#portfolio" class="nav-link scrollto"><i class="bi bi-shop-window"></i> <span>Loja</span></a></li>
+            <li><a href="{{ route('loja.index') }}" class="nav-link scrollto"><i class="bi bi-shop-window"></i> <span>Loja</span></a></li>
             <li><a href="#services" class="nav-link scrollto"><i class="bi bi-hdd-stack"></i> <span>Serviços</span></a></li>
             <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-send"></i> <span>Contato</span></a></li>
         </ul>
