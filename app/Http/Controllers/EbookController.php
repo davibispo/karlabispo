@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ebook;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class EbookController extends Controller
 {
@@ -13,7 +15,8 @@ class EbookController extends Controller
      */
     public function index()
     {
-        return view('ebooks.index');
+        $ebooks = Ebook::all()->where('ativo', 1);
+        return view('ebooks.index', compact('ebooks'));
     }
 
     /**
@@ -23,7 +26,8 @@ class EbookController extends Controller
      */
     public function create()
     {
-        //
+        $ebooks = Ebook::all()->where('ativo', 1);
+        return view('ebooks.create', compact('ebooks'));
     }
 
     /**
@@ -34,7 +38,29 @@ class EbookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $ebook = new Ebook();
+        $ebook->descricao = $request->descricao;
+
+        if($request->arquivo->isValid()){
+            $nameFile = Str::of($request->descricao)->slug('-').date('his').'.' .$request->arquivo->GetClientOriginalExtension();
+            $arquivo = $request->arquivo->storeAs('public/arquivos', $nameFile);
+            $arquivo = str_replace('public/','',$arquivo);
+            $ebook['arquivo'] = $arquivo;
+        }
+
+        if($request->imagem->isValid()){
+            $nameFile = Str::of($request->descricao)->slug('-').date('his').'.' .$request->imagem->GetClientOriginalExtension();
+            $imagem = $request->imagem->storeAs('public/arquivos', $nameFile);
+            $imagem = str_replace('public/','',$imagem);
+            $ebook['imagem'] = $imagem;  
+        }
+
+        $ebook->tipo = $request->tipo;
+
+        $ebook->save();
+
+        return view('ebooks.index');
     }
 
     /**
@@ -79,6 +105,9 @@ class EbookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ebook = Ebook::where('id', $id);
+        $ebook->delete();
+
+        return redirect()->back()->with('status','Arquivo excluído com sucesso!');
     }
 }

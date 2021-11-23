@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Link;
 use Illuminate\Http\Request;
 
 class LinkController extends Controller
@@ -13,7 +14,8 @@ class LinkController extends Controller
      */
     public function index()
     {
-        return view('links.index');
+        $links = Link::all();
+        return view('links.index', compact('links'));
     }
 
     /**
@@ -23,7 +25,7 @@ class LinkController extends Controller
      */
     public function create()
     {
-        //
+        return view('links.create');
     }
 
     /**
@@ -34,7 +36,14 @@ class LinkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $link = new Link();
+
+        $link->link = $request->link;
+        $link->descricao = $request->descricao;
+
+        $link->save();
+
+        return redirect()->back();
     }
 
     /**

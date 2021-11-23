@@ -208,7 +208,7 @@
                             </svg>
                             <i class="bi bi-tablet"></i>
                         </div>
-                        <h4>e-Books</h4>
+                        <h4>Arquivos Digitais</h4>
                     </a>
                     <p>Conteúdos Digitais Gratuitos</p>
                 </div>

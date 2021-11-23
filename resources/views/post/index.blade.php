@@ -50,14 +50,14 @@
                 </table>
 
                 <div class="btn">
-                    <a href="{{ route('post.create') }}">
-                        <button class="btn btn-dark">Criar Novo</button>
+                    <a href="{{ route('post.create') }}" class="btn btn-outline-secondary">
+                        Criar Novo
                     </a>
-                </div>
-                
-                <div class="btn">
-                    <a href="{{ route('blog.index') }}">
-                        <button class="btn btn-outline-secondary">Ir para Página do Blog</button>
+                    <a href="{{ route('blog.index') }}" class="btn btn-outline-secondary">
+                        Página do Blog
+                    </a>
+                    <a href="{{ route('dashboard') }}" class="btn btn-outline-secondary">
+                        Voltar ao Administrativo
                     </a>
                 </div>
 

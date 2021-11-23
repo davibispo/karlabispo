@@ -47,6 +47,9 @@
                             <a href="{{ route('produtos.create') }}" class="btn btn-outline-secondary">
                                 Cadastrar Produto
                             </a>
+                            <a href="{{ route('dashboard') }}" class="btn btn-outline-secondary">
+                                Voltar ao Administrativo
+                            </a>
                         </div>
                     </div>
                 </div>

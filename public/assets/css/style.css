@@ -1569,3 +1569,7 @@ section {
   margin-right: auto;
   padding: 10px;
 }
+
+.arquivo {
+  width: 100px;
+}

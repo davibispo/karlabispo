@@ -15,6 +15,11 @@ class CreateEbooksTable extends Migration
     {
         Schema::create('ebooks', function (Blueprint $table) {
             $table->id();
+            $table->string('descricao');
+            $table->text('arquivo');
+            $table->text('imagem')->nullable();
+            $table->string('tipo');
+            $table->char('ativo',1)->default('1');
             $table->timestamps();
         });
     }
