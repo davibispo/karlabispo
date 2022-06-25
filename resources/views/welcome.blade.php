@@ -79,7 +79,7 @@
 
             <div class="row">
             <div class="col-lg-4">
-                <img src="{{ asset('assets/img/image3-duplicado.png') }}" class="img-fluid" alt="">
+                <img src="{{ asset('assets/img/perfil/foto1.png') }}" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0 content">
                 <h3>Psicóloga</h3>
@@ -124,9 +124,9 @@
                         </a>
                     </h2>
                 </div>
-                
+
             </div>
-        </section>    
+        </section>
 
         <!-- ======= Serviços ======= -->
         <section id="services" class="services">
@@ -183,7 +183,7 @@
                 <p>Tempo precioso de escuta e instrução para superar dificuldades da crianças e adolescentes.</p>
                 </div>
             </div>
-            
+
             <div class="col-lg-4 col-md-6 align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
                 <div class="icon-box iconbox-yellow">
                     <a href="{{ route('curso.index') }}">
@@ -198,7 +198,7 @@
                     <p>O aprendizado do que é bele, bom e verdadeiro.</p>
                 </div>
             </div>
-            
+
             <div class="col-lg-4 col-md-6 align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
                 <div class="icon-box iconbox-red">
                     <a href="{{ route('ebooks.index') }}">
@@ -213,7 +213,7 @@
                     <p>Conteúdos Digitais Gratuitos</p>
                 </div>
             </div>
-            
+
             <!--
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
                 <div class="icon-box iconbox-teal">
@@ -243,7 +243,7 @@
             </div>
 
             <div class="row mt-1">
-                
+
                 <div class="col-lg-4">
                     <div class="info">
                         <div class="address">
@@ -274,7 +274,7 @@
                     @endif
 
                     {!! Form::open(['method'=>'POST', 'action'=>'App\Http\Controllers\ContatoController@sendMail', 'class'=>'form-horizontal']) !!}
-                    
+
                     <div class="row">
                         <div class="col-md-6 form-group">
                             {!! Form::text('nome', null, ['class'=>'form-control', 'required', 'placeholder'=>'Seu Nome']) !!}
@@ -289,11 +289,11 @@
                     <div class="form-group mt-3">
                         {{ Form::textarea('mensagem', null, ['class' =>'form-control input', 'cols'=> 20, 'rows'=>5, 'required', 'maxlength'=>''])}}
                     </div>
-                    
+
                     <div class=" form-group mt-3 text-center">
                         {!! Form::submit('Enviar mensagem', ['class'=>'btn btn-outline-secondary']) !!}
                     </div>
-                    
+
                     {!! Form::close() !!}
 
                 </div>
@@ -356,6 +356,6 @@
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>  
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
